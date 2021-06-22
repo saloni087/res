@@ -6,6 +6,68 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
+
+
+header
+{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 100px;
+  z-index: 10000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.5s;
+}
+header.sticky
+{
+  background: #fff;
+  padding: 10px 100px;
+  box-shadow: 0  5px 20px rgba(0,0,0,0.05);
+}
+header .logo
+{
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.8em;
+  text-decoration: none;
+}
+header.sticky .logo
+{
+  color: #111;
+}
+header .logo span
+{
+  color:#ff0157;
+}
+header .navigation
+{
+  position: relative;
+  display: flex;
+}
+header .navigation li
+{
+  list-style: none;
+  margin-left: 30px;
+}
+header .navigation li a
+{
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.4em;
+  font-weight: 300;
+}
+header.sticky .navigation li a
+{
+  color: #111;
+}
+header .navigation li a:hover
+{
+  color: blue;
+}
+
 .contact
 {
   position: relative;
@@ -143,6 +205,23 @@
   padding: 10px;
   font-size: 18px;
 }
+.copyrightText
+{
+  position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: black;
+   color: white;
+   text-align: center;
+   padding: 8px 40px;
+   opacity: 0.2;
+}
+.copyrightText p
+{
+  color: white;
+}
+
 @media (max-width: 991px)
 {
   .contact

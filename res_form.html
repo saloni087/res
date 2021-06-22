@@ -8,7 +8,16 @@
     <link rel="stylesheet" href="main.css">
   </head>
   <body>
-  
+    <header>
+      <a href="restaurant.html" class="logo">Island Grill<span>.</span></a>
+      <div class="menuToggle" onclick="toggleMenu();"></div>
+      <ul class="navigation">
+        <li><a href="menu.html" onclick="toggleMenu();">Menu</a></li>
+        <li><a href="order.html" onclick="toggleMenu();">Online Order</a></li>
+        <li><a href="res_form.html" onclick="toggleMenu();">Booking</a></li>
+        <li><a href="login.html" onclick="toggleMenu();">Sign Up</a></li>
+        <li><a href="contact.html" onclick="toggleMenu();">Contact Us</a></li>
+    </header>
     <section class="banner">
       <h2>BOOK YOUR TABLE NOW</h2>
       <div class="card-container">
@@ -17,9 +26,9 @@
         </div>
         <div class="card-content">
           <h3>Reservation</h3>
-          <form>
+          <form method="post" action="book.php">
             <div class="form-row">
-              <select  name="days">
+              <select name="day">
                 <option value="day-select">Select-Day</option>
                 <option value="Sunday">Sunday</option>
                 <option value="Monday">Monday</option>
@@ -29,7 +38,7 @@
                 <option value="Friday">Friday</option>
                 <option value="Saturday">Saturday</option>
               </select>
-              <select name="hours">
+              <select name="hour">
                 <option value="hour-select">Select Hour</option>
                 <option value="10">10:00</option>
                 <option value="10">12:00</option>
@@ -41,16 +50,19 @@
               </select>
             </div>
             <div class="form-row">
-              <input type="text" placeholder="Full Name">
-              <input type="text" placeholder="Phone Number">
+              <input type="text" name="name" placeholder="Full Name">
+              <input type="number" name="mobile" placeholder="Phone Number">
             </div>
             <div class="form-row">
-              <input type="number" placeholder="How many persons?" min="1">
-              <input type="submit" value="BOOK TABLE">
+              <input type="number" name="persons" placeholder="How many persons?" min="1">
+              <input type="submit" name="save" value="BOOK TABLE">
             </div>
           </form>
         </div>
       </div>
     </section>
+    <div class="copyrightText">
+      <p>ISLAND GRILL</p>
+    </div>
   </body>
 </html>

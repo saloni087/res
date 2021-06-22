@@ -6,6 +6,18 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   </head>
   <body>
+
+    <header>
+      <a href="restaurant.html" class="logo">Island Grill<span>.</span></a>
+      <div class="menuToggle" onclick="toggleMenu();"></div>
+      <ul class="navigation">
+        <li><a href="menu.html" onclick="toggleMenu();">Menu</a></li>
+        <li><a href="order.html" onclick="toggleMenu();">Online Order</a></li>
+        <li><a href="res_form.html" onclick="toggleMenu();">Booking</a></li>
+        <li><a href="login.html" onclick="toggleMenu();">Sign Up</a></li>
+        <li><a href="contact.html" onclick="toggleMenu();">Contact Us</a></li>
+      </ul>
+    </header>
     <h2>CHOOSE YOUR FOOD !!</h2>
     <h1><i class="fa fa-shopping-cart"></i></h1>
     <section class="items">
@@ -159,7 +171,9 @@
     <div class="select">
 
     </div>
-
+    <div class="copyrightText">
+      <p>ISLAND GRILL</p>
+    </div>
   </body>
 </html>
 <script type="text/javascript" src="main.js">

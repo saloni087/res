@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="lgstyle.css">
+  </head>
+  <body>
+
+    <header>
+      <a href="restaurant.html" class="logo">Island Grill<span>.</span></a>
+      <div class="menuToggle" onclick="toggleMenu();"></div>
+      <ul class="navigation">
+        <li><a href="menu.html" onclick="toggleMenu();">Menu</a></li>
+        <li><a href="order.html" onclick="toggleMenu();">Online Order</a></li>
+        <li><a href="res_form.html" onclick="toggleMenu();">Booking</a></li>
+        <li><a href="login.html" onclick="toggleMenu();">Sign Up</a></li>
+        <li><a href="contact.html" onclick="toggleMenu();">Contact Us</a></li>
+      </ul>
+    </header>
+
+    <div class="hero">
+      <div class="form-box">
+        <div class="button-box">
+          <div id="btn"></div>
+          <button type="button" class="toggle-btn" onclick="login()">Log In</button>
+          <button type="button" class="toggle-btn" onclick="register()">Register</button>
+        </div>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/"><img src="image/fb.png"></a>
+          <a href="https://www.twitter.com/"><img src="image/tw.png"></a>
+          <a href="https://www.google.com/"><img src="image/gp.png"></a>
+        </div>
+        <form id="login" class="input-group" action="lg.php" method="POST">
+          <input type="text" name="email" value="" class="input-field" placeholder="Email ID" required>
+          <input type="text" name="password" value="" class="input-field" placeholder="Enter Password" required>
+          <input type="checkbox" name="chk" value="" class="check-box"><span>Remember Password</span>
+          <button type="submit" name="save" class="submit-btn">Log In</button>
+        </form>
+        <form id="register" class="input-group" action="reg.php" method="post">
+          <input type="text" name="name" value="" class="input-field" placeholder="Full Name" required>
+          <input type="email" name="email" value="" class="input-field" placeholder="Email ID" required>
+          <input type="number" name="mobile" value="" class="input-field" placeholder="Phone No." required>
+          <input type="text" name="password" value="" class="input-field" placeholder="Enter Password" required>
+          <input type="checkbox" name="chk" value="" class="check-box"><span>I agree to the terms & conditions</span>
+          <button type="submit" name="save" class="submit-btn">Register</button>
+        </form>
+      </div>
+    </div>
+    <div class="copyrightText">
+      <p>ISLAND GRILL</p>
+    </div>
+    <script>
+      var x = document.getElementById("login");
+      var y = document.getElementById("register");
+      var z = document.getElementById("btn");
+
+      function register(){
+        x.style.left = "-400px";
+        y.style.left = "50px";
+        z.style.left = "110px";
+      }
+
+      function login(){
+        x.style.left = "50px";
+        y.style.left = "450px";
+        z.style.left = "0px";
+      }
+
+    </script>
+  </body>
+</html>

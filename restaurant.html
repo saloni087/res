@@ -14,7 +14,7 @@ body{
 
    .box{width:900px;
    float: right;
-   border: 1px solid none;}
+   border-bottom: 1px solid none;}
 
   .box ul li{
    width:120px;
@@ -27,9 +27,11 @@ body{
            color:white;}
 
 
-.box ul li:hover{ background-color: blue;}
 
-.box ul li a:hover{ color:white;}
+.box ul li a:hover{
+color:white;
+border-bottom: 3px solid blue;
+}
 
 .wd{
    width: 350px;
@@ -39,15 +41,24 @@ body{
    padding: 55px;
 }
 
+.wd img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
 .wd h1{
   text-align: center;
   text-transform: upercase;
   font-weight: 100px;
+  color: blue;
 }
 .wd h4{
-  text-align: justify;
-  color:gray;
+  text-align: center;
+  color:#ff9999;
   font-weight: normal;
+  font-size: 30px;
 }
 
 .wd h2{
@@ -67,6 +78,23 @@ padding-right:50px;
 text-align: center;
 }
 
+.copyrightText
+{
+  position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: black;
+   color: white;
+   text-align: center;
+   padding: 0px 0px;
+   opacity: 0.5;
+}
+.copyrightText p
+{
+  color: white;
+}
+
 form, input[type="button"]:hover{background-color: green;}
 
 </style>
@@ -75,10 +103,10 @@ form, input[type="button"]:hover{background-color: green;}
 
    <div class="box" style="font-size: 20px">
       <ul type="none">
-         <li><a href=""> Home</a></li>
          <li><a href="menu.html"> Menu</a></li>
          <li><a href="order.html"> Online Order</a></li>
          <li><a href="res_form.html"> Booking</a></li>
+          <li><a href="login.html">Sign Up</a></li>
          <li><a href="contact.html"> Contact Us</a></li>
 
 
@@ -86,10 +114,14 @@ form, input[type="button"]:hover{background-color: green;}
    </div>
 
  <div class="wd">
-   <h1> Welcome! </h1>
+   <h1> Welcome Foodies! </h1>
 
-   <h4><i>Start where you are. Use what you have. Do what you can</i></h4>
+   <h4><i>wake up it's food o'clock</i></h4>
+   <img src="image/front.gif" alt="">
 
+ </div>
+ <div class="copyrightText">
+   <p>ISLAND GRILL</p>
  </div>
 </body>
 </html>

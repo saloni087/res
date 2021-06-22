@@ -10,20 +10,80 @@
 	*{
 		margin: 0;
 		padding: 0;
-		color: #454545;
   box-sizing: border-box;
 }
 body{
-	background:  url("image/grey1.jpg");
-	background-repeat: no-repeat;
-	background-size: cover;
+	background-color: #8b0000;
+}
 
+header
+{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 100px;
+  z-index: 10000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.5s;
+}
+header.sticky
+{
+  background: #fff;
+  padding: 10px 100px;
+  box-shadow: 0  5px 20px rgba(0,0,0,0.05);
+}
+header .logo
+{
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.8em;
+  text-decoration: none;
+}
+header.sticky .logo
+{
+  color: #111;
+}
+header .logo span
+{
+  color:#ff0157;
+}
+header .navigation
+{
+  position: relative;
+  display: flex;
+}
+header .navigation li
+{
+  list-style: none;
+  margin-left: 30px;
+}
+header .navigation li a
+{
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.4em;
+  font-weight: 300;
+}
+header.sticky .navigation li a
+{
+  color: #111;
+}
+header .navigation li a:hover
+{
+  color: blue;
+}
+section
+{
+  padding:100px;
 }
 
 h2{
   text-align: center;
-  color: blue;
-  padding: 40px;
+  color: white;
+  padding: 120px;
 	font-family: var(--Kaushan);
 	font-size: 2.6rem;
 }
@@ -31,9 +91,9 @@ h2{
 h1{
 		width: 3%;
 	    position: relative;
-	    top: 1px;
 	    left: 90%;
 	    cursor: pointer;
+      color: white;
 	}
 	h1:before{
 		content: attr(data-count);
@@ -67,6 +127,8 @@ h1{
   object-fit: cover;
   cursor: pointer;
   transition: 0.2s ease;
+  border: 10px rigid;
+  border-radius: 10px;
 }
 .item img:hover{
   transform: scale(1.04);
@@ -74,6 +136,7 @@ h1{
 .item h3,h4{
   padding: 5px;
   text-align: center;
+  font-size: 20px;
 }
 .item button{
   padding: 5px 30px;
@@ -109,7 +172,6 @@ section div span{
 			animation: first 0.5s ease-in;
 			z-index: 2;
 			display: block;
-
 		}
 		section div:nth-child(2)>span.active{
 			animation: second 0.5s ease-in;
@@ -161,9 +223,6 @@ section div span{
 			    top: -70px;
 			}
 		}
-
-
-
 		.select{
 			width: 60%;
 			height: 580px;
@@ -178,6 +237,8 @@ section div span{
 		}
 		.select.display{
 			top: 10px;
+      color: white;
+      font-size: 22px;
 		}
 		.select div{
 			width: 100%;
@@ -211,6 +272,17 @@ section div span{
 			display: none;
 		}
 
+    .copyrightText
+    {
+      padding: 8px 40px;
+      border-top: 1px solid rgba(0,0,0,0.1);
+      text-align: center;
+      background-color: black;
+    }
+    .copyrightText p
+    {
+      color: white;
+    }
 @media screen and (max-width: 1000px){
   .items{
     grid-template-columns: repeat(2, 1fr);

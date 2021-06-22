@@ -9,6 +9,17 @@
        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
      </head>
      <body>
+       <header>
+         <a href="restaurant.html" class="logo">Island Grill<span>.</span></a>
+         <div class="menuToggle" onclick="toggleMenu();"></div>
+         <ul class="navigation">
+           <li><a href="menu.html" onclick="toggleMenu();">Menu</a></li>
+           <li><a href="order.html" onclick="toggleMenu();">Online Order</a></li>
+           <li><a href="res_form.html" onclick="toggleMenu();">Booking</a></li>
+           <li><a href="login.html" onclick="toggleMenu();">Sign Up</a></li>
+           <li><a href="contact.html" onclick="toggleMenu();">Contact Us</a></li>
+         </ul>
+       </header>
        <section class="contact">
          <div class="content">
            <h1>Contact Us</h1>
@@ -40,26 +51,29 @@
             </div>
            </div>
            <div class="contactForm">
-             <form>
-               <h2>Send Message</h2>
+             <form method="post" action="connect.php">
+               <h2>Feedback</h2>
                <div class="inputBox">
-                 <input type="text" name="" required="required">
+                 <input type="text" name="name" required="required">
                  <span>Full Name</span>
                </div>
                <div class="inputBox">
-                 <input type="text" name="" required="required">
+                 <input type="text" name="email" required="required">
                  <span>Email</span>
                </div>
                <div class="inputBox">
-                 <input type="text" name="" required="required">
+                 <input type="text" name="message" required="required">
                  <span>Type your Message...</span>
                </div>
                <div class="inputBox">
-                 <input type="submit" name="" value="Send">
+                 <input type="submit" name="save" value="Send">
                </div>
              </form>
            </div>
          </div>
            </section>
+           <div class="copyrightText">
+             <p>ISLAND GRILL</p>
+           </div>
      </body>
    </html>
